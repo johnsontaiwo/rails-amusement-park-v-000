@@ -1,8 +1,14 @@
+
+ 
+     <p><%= @message %></p>
+   
+
 <%= @user.name %>
 <%= @user.nausea %>
 <%= @user.height %>
-<h1>Mood:<%= @user.mood %></h1>
+<h1>Mood: <%= @user.mood %></h1>
 <h1>Tickets: <%= @user.tickets %>
+
 <% if @user.admin %>
   <h1>ADMIN</h1>
   <%end%>

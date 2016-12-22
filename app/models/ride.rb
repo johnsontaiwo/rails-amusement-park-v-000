@@ -24,10 +24,12 @@ class Ride < ActiveRecord::Base
   def short_height
     user.height < attraction.min_height
   end
-
+  
+  
    def user_updates
     self.user.update(happiness: self.user.happiness + self.attraction.happiness_rating, tickets: self.user.tickets - self.attraction.tickets, nausea: self.user.nausea + self.attraction.nausea_rating )
-  end
+      "Thanks for riding the #{self.attraction.name}!"
+   end
    
 
 end

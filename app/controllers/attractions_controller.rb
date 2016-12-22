@@ -23,6 +23,11 @@ class AttractionsController < ApplicationController
 
   def edit
   end
+   
+   def update
+    @attraction.update(attraction_params)
+    redirect_to @attraction
+   end
 
   def destroy
   end
