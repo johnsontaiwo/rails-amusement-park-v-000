@@ -1,13 +1,14 @@
 
- 
-     <p><%= @message %></p>
+<% if flash[:notice] %>
+<div class="notice"><%= flash[:notice] %></div>
+  <% end %>
    
 
-<%= @user.name %>
-<%= @user.nausea %>
-<%= @user.height %>
-<h1>Mood: <%= @user.mood %></h1>
-<h1>Tickets: <%= @user.tickets %>
+<h3>Name:<%= @user.name %></h3>
+<h3>Nauseaousness:<%= @user.nausea %></h3>
+<h3>Height:<%= @user.height %></h3>
+<h3>Mood: <%= @user.mood %></h3>
+<h3>Tickets: <%= @user.tickets %></h3>
 
 <% if @user.admin %>
   <h1>ADMIN</h1>
